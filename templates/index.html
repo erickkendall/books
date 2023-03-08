@@ -5,11 +5,11 @@
     <div class="content">
         {% for book in books %}
             <div class="books">
-                <p>{ book.work_id }}</p>
-                <p>{ book.title }}</p>
-                <p>{ book.authors }}</p>
-                <p>{ book.isbn }}</p>
-                <p>{ book.description }}</p>
+	        <p>{{ book.work_id }}</p>
+		<p>{{ book.title }}</p>
+		<p>{{ book.authors }}</p>
+		<p>{{ book.isbn }}</p>
+		<p>{{ book.description }}</p>
             </div>
         {% endfor %}
     </div>
