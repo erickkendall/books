@@ -27,7 +27,14 @@ class Books(db.Model):
         self.isbn = isbn
         self.description = description
 
-@app.route('/')
+@app.route('/all')
 def index():
     books = Books.query.all()
     return render_template('index.html', books=books)
+@app.route('/book/<int:id>')
+def find_book(id):
+    try: 
+        results = Books.query(workd_id==id)
+    except IndexError:
+        abort(404)
+
